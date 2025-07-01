@@ -1,14 +1,35 @@
 # Environment Variables Helper
 
-A VSCode/Cursor extension for securely setting environment variables for development and testing without leaving filesystem traces.
+## The Problem
 
-The extension adds to the command palette (`CtrlOrCmd+Shift+P`) two new commands:
+Ever needed to test your code with sensitive environment variables like API keys, database credentials, or authentication tokens? The traditional approaches all have significant drawbacks:
+
+- **`.env` files** - Risk accidental commits to version control, exposing secrets
+- **Shell exports** - Persist in shell history and affect other projects
+- **IDE configurations** - Often saved in workspace files that can be shared
+- **Hard-coding** - Obviously insecure and requires code changes
+
+## The Solution
+
+**Environment Variables Helper** is a VSCode/Cursor extension that provides a **zero-trace** approach to setting environment variables for development and testing. Variables are stored only in memory and automatically injected into your development environment without ever touching the filesystem.
+
+### Why This Extension?
+
+🔐 **Maximum Security**: No traces in files, git history, or shell history  
+🚀 **Instant Setup**: Set variables in seconds with a simple UI  
+🔄 **Smart Integration**: Automatically restarts language servers to pick up changes  
+🌍 **Universal**: Works with any programming language and testing framework  
+💾 **Memory-Only**: Variables disappear when VS Code closes - no cleanup needed
 
 ![Screenshot](images/image.png)
 
-The video below shows how the extension can help with the rust test runner:
+### See It In Action
+
+The video below demonstrates setting an environment variable and running Rust tests with the new configuration:
 
 ![Workflow](images/demo-hq.gif)
+
+*The extension seamlessly integrates with your existing workflow while keeping sensitive data secure.*
 
 ## Features
 
@@ -79,9 +100,9 @@ The video below shows how the extension can help with the rust test runner:
 2. Press `F5` to run in development mode
 3. Or package and install:
 
-   ```
+   ```bash
    npm install
-   npm build
+   npm run compile
    npm run package
    cursor --install-extension environment-variables-helper-0.0.1.vsix
    ```

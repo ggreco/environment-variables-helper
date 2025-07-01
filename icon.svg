@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shield background -->
+  <path d="M64 8 C32 8, 16 24, 16 40 C16 72, 32 96, 64 120 C96 96, 112 72, 112 40 C112 24, 96 8, 64 8 Z" 
+        fill="#1f4788" stroke="#ffffff" stroke-width="2"/>
+  
+  <!-- Inner shield highlight -->
+  <path d="M64 16 C38 16, 24 28, 24 40 C24 68, 38 88, 64 108 C90 88, 104 68, 104 40 C104 28, 90 16, 64 16 Z" 
+        fill="#2563eb" opacity="0.8"/>
+  
+  <!-- ENV text -->
+  <text x="64" y="54" 
+        font-family="SF Pro Display, -apple-system, BlinkMacSystemFont, Arial, sans-serif" 
+        font-size="24" 
+        font-weight="bold" 
+        fill="#ffffff" 
+        text-anchor="middle" 
+        dominant-baseline="middle">ENV</text>
+  
+  <!-- Variable symbol -->
+  <text x="64" y="78" 
+        font-family="SF Mono, Monaco, Consolas, monospace" 
+        font-size="16" 
+        fill="#60a5fa" 
+        text-anchor="middle" 
+        dominant-baseline="middle">${var}</text>
+  
+  <!-- Security dot indicator -->
+  <circle cx="92" cy="36" r="4" fill="#10b981"/>
+</svg> 

@@ -2,8 +2,8 @@
   "name": "environment-variables-helper",
   "displayName": "Environment Variables Helper",
   "description": "Securely set environment variables for development and testing without filesystem traces",
-  "version": "0.0.1",
-  "publisher": "Gabriele Greco (ggr@veo.co)",
+  "version": "0.0.2",
+  "publisher": "Gabriele-Greco",
   "engines": {
     "vscode": "^1.60.0"
   },
@@ -32,6 +32,7 @@
     "url": "https://github.com/ggreco/environment-variables-helper/issues"
   },
   "license": "MIT",
+  "icon": "icon.png",
   "galleryBanner": {
     "color": "#1e1e1e",
     "theme": "dark"
