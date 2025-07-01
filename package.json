@@ -1,0 +1,67 @@
+{
+  "name": "environment-variables-helper",
+  "displayName": "Environment Variables Helper",
+  "description": "Securely set environment variables for development and testing without filesystem traces",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "rustEnvHelper.setVariable",
+        "title": "Set Environment Variable",
+        "category": "Env Helper"
+      },
+      {
+        "command": "rustEnvHelper.clearVariable",
+        "title": "Clear Environment Variable",
+        "category": "Env Helper"
+      },
+      {
+        "command": "rustEnvHelper.listVariables",
+        "title": "List Set Variables",
+        "category": "Env Helper"
+      },
+      {
+        "command": "rustEnvHelper.runTestWithEnv",
+        "title": "Run Test with Environment",
+        "category": "Env Helper"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "rustEnvHelper.setVariable",
+        "key": "ctrl+shift+e",
+        "mac": "cmd+shift+e"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "rustEnvHelper.setVariable",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "16.x",
+    "@types/vscode": "^1.60.0",
+    "typescript": "^4.7.4",
+    "vsce": "^2.15.0"
+  }
+}
