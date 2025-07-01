@@ -2,6 +2,14 @@
 
 A VSCode/Cursor extension for securely setting environment variables for development and testing without leaving filesystem traces.
 
+The extension adds to the command palette (`CtrlOrCmd+Shift+P`) two new commands:
+
+![Screenshot](images/image.png)
+
+The video below shows how the extension can help with the rust test runner:
+
+![Workflow](images/demo-hq.gif)
+
 ## Features
 
 - 🔒 **Secure**: Environment variables stored in memory only - no filesystem traces
@@ -44,12 +52,14 @@ A VSCode/Cursor extension for securely setting environment variables for develop
 ## Supported Languages
 
 ### Language Server Auto-Restart
+
 - **Rust** - `rust-analyzer`
 - **TypeScript/JavaScript** - TypeScript language server
 - **Python** - Python language server
 - **C/C++** - Microsoft C/C++, clangd, ccls
 
 ### Test Pattern Detection
+
 - **Rust** - `#[test]` annotations
 - **JavaScript/TypeScript** - `test()`, `it()`, `describe()`
 - **Python** - `def test_*()` functions
@@ -63,8 +73,15 @@ A VSCode/Cursor extension for securely setting environment variables for develop
 - Compiler flags and build configurations
 - Any sensitive configuration that shouldn't be in files
 
-## Installation
+## Development mode
 
 1. Open the extension folder in VSCode/Cursor
 2. Press `F5` to run in development mode
-3. Or package and install: `vsce package` → Install VSIX file 
+3. Or package and install:
+
+   ```
+   npm install
+   npm build
+   npm run package
+   cursor --install-extension environment-variables-helper-0.0.1.vsix
+   ```
